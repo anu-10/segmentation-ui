@@ -30,7 +30,7 @@ class Image(Resource):
         segment = segmentation_model()
         images = segment.segmentation()
         save_path = '../segmented/saved_image0.png'
-        I = images[0, :, :, 0]
+        I = images[len(images)//2, :, :, 0]
         I8 = (((I - I.min()) / (I.max() - I.min())) * 255).astype(np.uint8)
         image = pilimage.fromarray(I8)
         image.save(save_path)
@@ -48,7 +48,6 @@ class Image(Resource):
             return jsonify({'error': 'No selected file'})
 
         if file:
-            filename = file.filename
             file.save('../images/file.nii.gz')
             return jsonify({'message': 'File uploaded successfully'})
 

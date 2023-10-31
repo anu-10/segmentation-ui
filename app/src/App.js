@@ -140,7 +140,7 @@ class App extends Component {
  
         return (
             <div>
-                <h1>Liver Tumor Segmentation</h1>
+                <h1 style={{marginLeft: '150px'}}>Liver Tumor Segmentation Application</h1>
                 
                 <div className="grid-container">
                     
@@ -162,7 +162,7 @@ class App extends Component {
                     
                     {this.state.img && (
                         <div className="grid-item output">
-                            <h2>Output Mask</h2>
+                            <h2>Predicted Mask</h2>
                             <img src={this.state.img} alt="" />
                         </div>
                     )}

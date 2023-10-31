@@ -110,7 +110,7 @@ class segmentation_model:
 
     
     def segmentation(self):
-        path = "../images/*"
+        path = "../images/file.nii.gz"
         x = self.preprocessing(path)
         print(x.shape)
         input_layer = Input(x.shape[1:])
@@ -118,13 +118,5 @@ class segmentation_model:
         model_weights = "../model/seg.h5"
         model.load_weights(model_weights)
         res = model.predict(x)
-        self.dice = self.dice_coef(x, res)
         return res
 
-    def dice_coef(self, y_true, y_pred):
-        y_true = K.cast(y_true, 'double')
-        y_pred = K.cast(y_pred, 'double')
-        y_true_f = K.flatten(y_true)
-        y_pred_f = K.flatten(y_pred)
-        intersection = K.sum(y_true_f * y_pred_f)
-        return (2. * intersection + K.epsilon()) / (K.sum(y_true_f) + K.sum(y_pred_f) + K.epsilon())
