@@ -1,0 +1,39 @@
+
+.grid-container {
+  width: 1000px;
+  display: flex;
+}
+.button-style {
+  width: 100px;
+  margin-top:10px !important;
+  margin-bottom: 10px !important;
+}
+/* Style the buttons */
+.grid-item {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+#file-selected {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.output {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start;
+}
+.grid-item button {
+  margin: 5px;
+}
