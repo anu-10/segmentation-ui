@@ -13,4 +13,4 @@
   <li>cd scripts</li>
   <li>flask --app server run</li>
 </ul>
-![image](https://github.com/anu-10/segmentation-ui/assets/73535202/b4492a63-9a92-47c3-bf05-54ea97354c2d)
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73535202/279360370-b4492a63-9a92-47c3-bf05-54ea97354c2d.png">
